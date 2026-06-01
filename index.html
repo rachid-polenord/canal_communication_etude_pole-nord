@@ -3,19 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contacts - Étudiants</title>
-   <style>
-    /* Styles simples, pas d'effets modernes */
+   <title>Contacts - Étudiants</title>
+  <style>
     html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #f7fafc; color: #0f172a; }
     .topbar { background: #2563eb; color: #fff; padding: 12px 16px; }
     .topbar .title { margin: 0; font-size: 18px; font-weight: 700; }
     .topbar .subtitle { margin: 4px 0 0 0; font-size: 13px; opacity: 0.95; }
-    /* Layout: topbar + main fills viewport */
     body { display: flex; flex-direction: column; overflow-x: hidden; }
     main.card { background: #ffffff; border-radius: 12px; padding: 16px; box-sizing: border-box; flex: 1 1 auto; display: flex; flex-direction: column; margin: 16px; max-width: 100%; }
     h1 { margin: 0 0 6px 0; font-size: 20px; }
     p.lead { margin: 0 0 12px 0; color: #475569; font-size: 14px; }
-    /* Buttons area: make three buttons behave as "cards" and fill remaining vertical space equally */
     .buttons { display: flex; flex-direction: column; gap: 12px; flex: 1 1 auto; }
     .btn {
       display: block;
@@ -30,11 +27,8 @@
       position: relative;
       z-index: auto;
     }
-    /* Importance colours: léger → green (low), moyen → amber (medium), grave → red (high) */
     .leger { background: #10b981; }   /* green */
     .moyen { background: #f59e0b; }   /* amber/orange */
-    .grave { background: #ef4444; }   /* red */
-    /* Each .card-button shares available height equally */
     .buttons > a { flex: 1 1 0; display: flex; align-items: center; isolation: isolate; }
     .buttons > a > span { display: block; pointer-events: none; }
     @media (min-width: 900px) {
@@ -58,13 +52,9 @@
       <a class="btn leger" href="mailto:salledetudepn@brucity.be?subject=J%27ai%20une%20id%C3%A9e%20ou%20une%20suggestion%20pour%20la%20salle%20d%27%C3%A9tude">
         <span>Salle d'étude Pole Nord : idées et suggestions d'amélioration</span>
       </a>
-      <!-- Moyen (importance moyenne) -->
-      <a class="btn moyen" href="mailto:rachid.chamseddine@brucity.be?subject=J%27ai%20une%20question%20ou%20une%20remarque%20au%20sujet%20de%20la%20salle%20d%27%C3%A9tude">
-        <span>Personne en charge des salles d'étude : question et remarques</span>
-      </a>
-      <!-- Grave (importance élevée) -->
-      <a class="btn grave" href="mailto:olivier.courtin@brucity.be?subject=Il%20y%20a%20des%20probl%C3%A8mes%20en%20salle%20d%27%C3%A9tude">
-        <span>Responsable principale : En cas de problème en salle d'étude</span>
+      <!-- Fusion des blocs 2 et 3 (moyen + grave) -->
+      <a class="btn moyen" href="mailto:rachid.chamseddine@brucity.be;olivier.courtin@brucity.be?subject=Question%20ou%20probl%C3%A8me%20-%20Salle%20d%27%C3%A9tude">
+        <span>Personne en charge & Responsable : questions, remarques ou problèmes</span>
       </a>
     </div>
   </main>
