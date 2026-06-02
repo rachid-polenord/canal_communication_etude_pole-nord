@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacts - Étudiants</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      height: 100dvh;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f1efe8;
+      color: #0f172a;
+    }
+
+    /* centrage pleine page */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 520px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      justify-content: space-between; /* espace homogène entre header, boutons, footer */
+      padding: 16px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 6px;
+      flex: 0 0 auto;
+    }
+    .header img { width: 48px; height: 48px; object-fit: contain; }
+    .header-text { margin-left: auto; text-align: right; }
+    .header-text h1 { margin: 0; font-size: 18px; font-weight: 700; color: #0f172a; }
+    .header-text p  { margin: 0; font-size: 13px; color: #64748b; }
+
+    /* zone boutons occupe l'espace restant et répartit les 3 boutons également */
+    .btn-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+
+    /* chaque bouton a la même hauteur et structure interne cohérente */
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 2px solid;
+      padding: 14px;
+      transition: transform 0.12s, box-shadow 0.12s;
+      background-clip: padding-box;
+      box-shadow: 0 1px 0 rgba(15,23,42,0.03);
+      height: calc((100% - 36px) / 3); /* force trois boutons égaux occupant l'espace de .btn-list */
+      min-height: 72px;
+      max-height: 160px;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn:hover { box-shadow: 0 8px 20px rgba(15,23,42,0.06); }
+
+    /* couleurs */
+    .btn1 { background: #EEEDFE; border-color: #AFA9EC; }
+    .btn2 { background: #FBEAF0; border-color: #ED93B1; }
+    .btn3 { background: #FEF4EE; border-color: #F0A756; }
+
+    .btn-icon {
+      width: 64px; height: 64px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      color: #fff;
+      flex: 0 0 64px;
+    }
+    .btn1 .btn-icon { background: #7f77dd; }
+    .btn2 .btn-icon { background: #D4537E; }
+    .btn3 .btn-icon { background: #E69500; }
+
+    .btn-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .btn-label { font-size: 17px; font-weight: 700; color: inherit; line-height: 1; }
+    .btn-sub { font-size: 13px; color: rgba(0,0,0,0.55); }
+
+    .btn-desc {
+      font-size: 13px;
+      line-height: 1.3;
+      color: rgba(0,0,0,0.65);
+      overflow: hidden;
+    }
+
+    /* petits écrans : garder logique et équilibre tout en réduisant proportionnellement */
+    @media (max-height: 720px) {
+      .wrapper { gap: 12px; padding: 12px; }
+      .btn { gap: 12px; padding: 12px; height: auto; min-height: 68px; }
+      .btn-icon { width: 56px; height: 56px; flex: 0 0 56px; font-size: 24px; }
+      .btn-label { font-size: 16px; }
+    }
+
+    @media (max-width: 420px) {
+      .wrapper { max-width: 420px; padding: 10px; }
+      .header img { width: 44px; height: 44px; }
+      .btn-icon { width: 48px; height: 48px; flex: 0 0 48px; font-size: 22px; }
+      .btn { padding: 10px 12px; min-height: 64px; gap: 10px; border-radius: 12px; height: auto; }
+      .btn-label { font-size: 15px; }
+      .btn-desc { font-size: 12px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <img src="assets/logo_pn.png" alt="Logo Pole Nord" />
+      <div class="header-text">
+        <h1>Contacts étudiants</h1>
+        <p>Salle d'étude Pole Nord </p>
+      </div>
+    </div>
+
+    <div class="btn-list">
+<a class="btn btn1" href="mailto:salledetudepn@brucity.be?subject=%5BNiveau%20leger%5D%20Idee%20ou%20suggestion%20-%20Salle%20d'etude">
+        <div class="btn-icon">💡</div>
+        <div class="btn-content">
+          <div class="btn-row">
+            <div class="btn-label">Idées &amp; suggestions</div>
+            <div class="btn-sub">Niveau : léger</div>
+          </div>
+          <div class="btn-desc">Tu as une idée pour améliorer l'ambiance, le confort ou l'efficacité de la salle ? Envoie-nous tes suggestions !</div>
+        </div>
+      </a>
+
+
+<a class="btn btn2" href="mailto:salledetudepn@brucity.be?subject=%5BNiveau%20intermediaire%5D%20Question%20ou%20probleme%20-%20Salle%20d'etude">
+        <div class="btn-icon">💬</div>
+        <div class="btn-content">
+          <div class="btn-row">
+            <div class="btn-label">Questions &amp; problèmes</div>
+            <div class="btn-sub">Niveau : moyen</div>
+          </div>
+          <div class="btn-desc">Une info à demander, un petit problème à signaler ou quelque chose qui cloche ? Contacte le responsable.</div>
+        </div>
+      </a>
+
+
+<a class="btn btn2" href="mailto:salledetudepn@brucity.be?subject=%5BNiveau%20intermediaire%5D%20Question%20ou%20probleme%20-%20Salle%20d'etude">
+        <div class="btn-icon">⚠️</div>
+        <div class="btn-content">
+          <div class="btn-row">
+            <div class="btn-label">Urgent / grave</div>
+            <div class="btn-sub">Niveau : urgent</div>
+          </div>
+          <div class="btn-desc">Un problème sérieux, un incident important ou quelque chose qui nécessite une intervention rapide ? Signale-le immédiatement.</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- footer spacer to keep visual balance on very tall screens -->
+    <div style="flex:0 0 8px;"></div>
+  </div>
+
+  <script src="assets/animation.js"></script>
+  <script src="assets/confetti.js"></script>
+  <script src="assets/emoji-burst.js"></script>
+</body>
+</html>
