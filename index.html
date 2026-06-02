@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacts - Étudiants</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      height: 100dvh; overflow: hidden;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f1efe8;
+      color: #0f172a;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .wrapper {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 100%;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 4px;
+    }
+    .header img { width: 48px; height: 48px; object-fit: contain; }
+    .header-text { margin-left: auto; text-align: right; }
+    .header-text h1 { margin: 0; font-size: 18px; font-weight: 700; color: #0f172a; }
+    .header-text p  { margin: 0; font-size: 12px; color: #64748b; }
+    .btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      border: 2px solid;
+      padding: 20px;
+    }
+    .btn1 { background: #EEEDFE; border-color: #AFA9EC; }
+    .btn2 { background: #FBEAF0; border-color: #ED93B1; }
+    .btn-icon {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      color: #fff;
+    }
+    .btn1 .btn-icon { background: #7f77dd; }
+    .btn2 .btn-icon { background: #D4537E; }
+    .btn-label { font-size: 20px; font-weight: 700; text-align: center; }
+    .btn1 .btn-label { color: #3C3489; }
+    .btn2 .btn-label { color: #72243E; }
+    .btn-sub { font-size: 14px; text-align: center; }
+    .btn1 .btn-sub { color: #534AB7; }
+    .btn2 .btn-sub { color: #993556; }
+    .btn-desc { font-size: 15px; text-align: center; line-height: 1.5; max-width: 350px; }
+    .btn1 .btn-desc { color: #534AB7; }
+    .btn2 .btn-desc { color: #993556; }
+    .btn:hover { opacity: 0.85; transform: scale(0.99); transition: opacity 0.15s, transform 0.15s; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <img src="assets/logo_pn.png" alt="Logo Pole Nord" />
+      <div class="header-text">
+        <h1>Contacts étudiants</h1>
+        <p>Salle d'étude Pole Nord — fais-toi entendre !</p>
+      </div>
+    </div>
+    <a class="btn btn1" href="mailto:salledetudepn@brucity.be?subject=J%27ai%20une%20id%C3%A9e%20ou%20une%20suggestion%20pour%20la%20salle%20d%27%C3%A9tude">
+      <div class="btn-icon">💡</div>
+      <div class="btn-label">Idées & suggestions</div>
+      <div class="btn-sub">Améliorer la salle d'étude</div>
+      <div class="btn-desc">Tu as une idée pour améliorer la salle d'étude ? Un truc qui rendrait l'ambiance meilleure, plus confortable ou plus efficace ? Envoie-nous tes suggestions !</div>
+    </a>
+    <a class="btn btn2" href="mailto:salledetudepn@brucity.be?subject=Question%20ou%20probl%C3%A8me%20-%20Salle%20d%27%C3%A9tude">
+      <div class="btn-icon">💬</div>
+      <div class="btn-label">Questions & solutions</div>
+      <div class="btn-sub">Contacter le responsable</div>
+      <div class="btn-desc">Une info à demander, un problème à signaler ou quelque chose qui cloche ? Il y a toujours une solution. Contacte le responsable directement.</div>
+    </a>
+  </div>
+<script src="assets/animation.js"></script>
+<script src="assets/confetti.js"></script>
+<script src="assets/emoji-burst.js"></script>
+</body>
+</html>
