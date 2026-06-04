@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Application de l'animation ---
   Object.assign(logo.style, {
-    animation: 'logo-spin 40s linear infinite',
+    animation: 'logo-spin 30s linear infinite',
     transformOrigin: 'center center',
     willChange: 'transform',
   });
