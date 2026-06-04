@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resize();
     window.addEventListener('resize', resize);
 
-    const COUNT = 80;
+    const COUNT = 50;
     const particles = [];
     for (let i = 0; i < COUNT; i++) {
       particles.push({
