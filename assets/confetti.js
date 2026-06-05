@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const srcA = 'assets/logo_pn.png';
-  const srcB = 'assets/logo_pn2.png';
+  const srcB = 'assets/logo_pn3.png';
 
   const imgA = new Image();
   const imgB = new Image();
